@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Care Odontologia | Clínica Odontológica Particular em Brasília</title>
+<meta name="description" content="Conheça a Premium Care Odontologia, clínica particular no JK Shopping em Brasília — atendimento humanizado, planejamento personalizado, ortodontia, implantes e estética dental.">
+<link rel="icon" type="image/webp" href="./assets/favicon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 16px; }
+  body { font-family: 'Montserrat', sans-serif; background: #0A0908; color: #F4EFE6; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  a { text-decoration: none; color: inherit; cursor: pointer; }
+  img { display: block; max-width: 100%; }
+  iframe { display: block; }
+  button { font-family: inherit; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(36px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+    60%       { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  }
+
+  .hanim > * { animation: fadeUp 1s cubic-bezier(.22,.61,.36,1) both; }
+  .hanim > .d1 { animation-delay: .1s; }
+  .hanim > .d2 { animation-delay: .28s; }
+  .hanim > .d3 { animation-delay: .44s; }
+  .hanim > .d4 { animation-delay: .58s; }
+  .hanim > .d5 { animation-delay: .72s; }
+  .hanim > .d6 { animation-delay: .86s; }
+  .vis-anim { animation: fadeIn 1.4s ease .65s both; }
+  [data-screen-label="Atendimento Particular"] .sec-t { color: #FFF9F0 !important; }
+  [data-screen-label="Atendimento Particular"] > .px > div:first-child > p { color: #D0C7BB !important; }
+  [data-screen-label="Atendimento Particular"] .part-grid > div > p:last-child { color: #C7BEB1 !important; }
+  [data-screen-label="Atendimento Particular"] > .px > div:last-child p { color: #BDB5AA !important; }
+  [data-screen-label="CTA Final"] h2 em { color: #E2B75E !important; }
+  [data-screen-label="Footer"] p,
+  [data-screen-label="Footer"] span,
+  [data-screen-label="Footer"] a:not([style*="#C8A45A"]) { color: #B8B0A5 !important; }
+  [data-screen-label="Footer"] svg[stroke="#6A6460"] { stroke: #B8B0A5 !important; }
+  [data-screen-label="Footer"] svg[fill="#6A6460"] { fill: #B8B0A5 !important; }
+  [data-screen-label="Footer"] svg [fill="#6A6460"] { fill: #B8B0A5 !important; }
+  [data-screen-label="Footer"] p[style*="text-transform:uppercase"] { color: #D2C7B8 !important; }
+  [data-screen-label="Depoimentos"] > .px > div:first-child p[style*="letter-spacing:.06em"] { display: none !important; }
+.nav-dsk > p[style*="letter-spacing:.06em"] { display: none !important; }
+  .sobre-gallery-card { height: 180px; }
+  .depo-card { flex: 0 0 33.3333%; padding: 0 12px; }
+  .sobre-gallery-slide { flex: 0 0 33.3333%; padding-right: 12px; }
+
+  @media (max-width: 960px) {
+    .nav-dsk  { display: none !important; }
+    .nav-hmb  { display: flex !important; }
+    .mobile-menu-panel { padding: 96px 24px 40px !important; justify-content: flex-start !important; gap: 22px !important; overflow-y: auto !important; }
+    .mobile-menu-link { font-size: 34px !important; text-align: center !important; }
+    .mobile-menu-cta { width: min(100%, 320px) !important; text-align: center !important; padding: 16px 20px !important; }
+    .hero-split { flex-direction: column !important; }
+    .hero-vis   { display: none !important; }
+    .hero-txt   { padding: 136px 24px 80px !important; width: 100% !important; max-width: 100% !important; }
+    .hero-h1    { font-size: 48px !important; line-height: 1.1 !important; }
+    .hero-btns  { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+    .hero-wa-btn, .trat-wa-btn, .dra-wa-btn, .loc-wa-btn, .cta-wa-btn { width: 100% !important; justify-content: center !important; text-align: center !important; }
+    .sobre-split, .dra-split, .loc-split { flex-direction: column !important; }
+    .sobre-img  { flex: none !important; height: 380px !important; }
+    .dra-img    { flex: none !important; height: 440px !important; }
+    .sobre-txt  { padding: 64px 24px !important; }
+    .dra-txt    { padding: 64px 24px !important; }
+    .trat-row   { flex-direction: column !important; align-items: center !important; }
+    .trat-card  { width: 100% !important; max-width: 520px !important; }
+    .depo-card { flex-basis: 50% !important; }
+    .sobre-gallery-slide { flex-basis: 50% !important; }
+    .depo-dots { display: none !important; }
+    .sobre-gallery-card { height: 150px !important; }
+    .dif-grid   { grid-template-columns: 1fr 1fr !important; }
+    .part-grid  { grid-template-columns: 1fr 1fr !important; }
+    .loc-map    { flex: none !important; height: 340px !important; min-height: unset !important; }
+    .loc-inf    { padding: 60px 24px !important; }
+    [data-screen-label="Tratamentos"],
+    [data-screen-label="Depoimentos"],
+    [data-screen-label="Diferenciais"],
+    [data-screen-label="Atendimento Particular"] { padding: 96px 0 !important; }
+    [data-screen-label="CTA Final"] { background-attachment: scroll !important; padding: 104px 0 !important; }
+    .ftr-cols   { flex-direction: column !important; gap: 48px !important; }
+    .ftr-cols > div { width: 100% !important; flex: none !important; }
+    .px         { padding-left: 24px !important; padding-right: 24px !important; }
+    .sec-t      { font-size: 40px !important; }
+  }
+  @media (max-width: 600px) {
+    .mobile-menu-link { font-size: 28px !important; }
+    [data-screen-label="Hero"],
+    .hero-split { min-height: auto !important; }
+    [data-screen-label="Hero"] {
+      background-image:
+        linear-gradient(90deg, rgba(10,9,8,0.94) 0%, rgba(10,9,8,0.84) 42%, rgba(10,9,8,0.48) 72%, rgba(10,9,8,0.12) 100%),
+        radial-gradient(ellipse at 80% 50%, rgba(200,164,90,0.10) 0%, transparent 68%),
+        url('./assets/fundo_hero.webp') !important;
+      background-position: center top, center top, calc(50% - 80px) top !important;
+      background-size: cover, cover, auto 100% !important;
+    }
+    .hero-txt   { padding: 122px 20px 72px !important; }
+    .sobre-gallery-card { height: 280px !important; }
+    .depo-card,
+    .sobre-gallery-slide { flex-basis: 100% !important; padding-left: 0 !important; padding-right: 0 !important; }
+    .sobre-img  { display: none !important; height: 0 !important; }
+    .dra-img    { height: 360px !important; }
+    .dif-grid  { grid-template-columns: 1fr !important; }
+    .part-grid { grid-template-columns: 1fr !important; }
+    .hero-h1   { font-size: 36px !important; }
+    [data-screen-label="Hero"] p,
+    [data-screen-label="CTA Final"] p { font-size: 14px !important; line-height: 1.72 !important; }
+    [data-screen-label="Hero"] .hero-btns a,
+    [data-screen-label="CTA Final"] .cta-wa-btn { width: 100% !important; }
+    [data-screen-label="CTA Final"] .px { max-width: 100% !important; }
+    [data-screen-label="Diferenciais"] > .px > div:first-child { text-align: center !important; }
+    [data-screen-label="Diferenciais"] > .px > div:first-child > div { justify-content: center !important; }
+    [data-screen-label="Diferenciais"] .dif-grid > div { text-align: center !important; }
+    [data-screen-label="Diferenciais"] .dif-grid > div > div:first-child { margin-left: auto !important; margin-right: auto !important; }
+    [data-screen-label="Footer"] { padding-top: 64px !important; }
+    [data-screen-label="Footer"] .ftr-cols,
+    [data-screen-label="Footer"] .ftr-cols > div,
+    [data-screen-label="Footer"] .ftr-cols p,
+    [data-screen-label="Footer"] .ftr-cols a { text-align: center !important; }
+    [data-screen-label="Footer"] .ftr-cols > div { align-items: center !important; }
+    [data-screen-label="Footer"] .ftr-cols img { margin-left: auto !important; margin-right: auto !important; }
+    [data-screen-label="Footer"] .ftr-cols div[style*="gap:12px;align-items:center"] { justify-content: center !important; width: 100% !important; }
+    .footer-copy { font-size: 10px !important; line-height: 1.7 !important; }
+    .wa-float { width: 54px !important; height: 54px !important; right: 18px !important; bottom: 18px !important; }
+    .sec-t     { font-size: 34px !important; }
+  }
+</style>
+</helmet>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav style="position:fixed;top:0;left:0;right:0;z-index:200;background:{{ navBg }};backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:{{ navShadow }};transition:background .5s ease,box-shadow .5s ease">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+
+    <a onClick="{{ toInicio }}" style="flex-shrink:0">
+      <img src="./assets/logo-premium-care-light.png" alt="Premium Care Odontologia" style="height:46px;width:auto;object-fit:contain">
+    </a>
+
+    <div class="nav-dsk" style="display:flex;align-items:center;gap:36px">
+      <a onClick="{{ toInicio }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#C8A45A;transition:color .25s" style-hover="color:#F4EFE6">Início</a>
+      <a onClick="{{ toSobre }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#8A8278;transition:color .25s" style-hover="color:#F4EFE6">Sobre</a>
+      <a onClick="{{ toTratamentos }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#8A8278;transition:color .25s" style-hover="color:#F4EFE6">Tratamentos</a>
+      <a onClick="{{ toDra }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#8A8278;transition:color .25s" style-hover="color:#F4EFE6">Dra. Alessandra</a>
+      <a onClick="{{ toDepoimentos }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#8A8278;transition:color .25s" style-hover="color:#F4EFE6">Depoimentos</a>
+      <a onClick="{{ toLocalizacao }}" style="font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:#8A8278;transition:color .25s" style-hover="color:#F4EFE6">Localização</a>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:16px">
+      <a class="nav-dsk" href="{{ waLink }}" target="_blank" style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid #25D366;background:#25D366;color:#0A0908;padding:10px 24px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
+        Agendar Avaliação
+      </a>
+      <button class="nav-hmb" onClick="{{ toggleMenu }}" style="display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px">
+        <span style="display:block;width:22px;height:1.5px;background:#F4EFE6"></span>
+        <span style="display:block;width:16px;height:1.5px;background:#F4EFE6;margin-left:6px"></span>
+        <span style="display:block;width:22px;height:1.5px;background:#F4EFE6"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════ MOBILE MENU ══════════════════════════ -->
+<div class="mobile-menu-panel" style="display:{{ mobileMenuDisplay }};position:fixed;inset:0;z-index:300;background:rgba(8,7,6,0.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:32px">
+  <button onClick="{{ toggleMenu }}" style="position:absolute;top:22px;right:24px;background:none;border:none;cursor:pointer;color:#F4EFE6;padding:8px;line-height:1">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#F4EFE6" stroke-width="1.5" stroke-linecap="round">
+      <path d="M2 2l18 18M20 2L2 20"></path>
+    </svg>
+  </button>
+  <a class="mobile-menu-link" onClick="{{ toInicio }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Início</a>
+  <a class="mobile-menu-link" onClick="{{ toSobre }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Sobre</a>
+  <a class="mobile-menu-link" onClick="{{ toTratamentos }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Tratamentos</a>
+  <a class="mobile-menu-link" onClick="{{ toDra }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Dra. Alessandra</a>
+  <a class="mobile-menu-link" onClick="{{ toDepoimentos }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Depoimentos</a>
+  <a class="mobile-menu-link" onClick="{{ toLocalizacao }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Localização</a>
+  <a class="mobile-menu-cta" href="{{ waLink }}" target="_blank" style="margin-top:12px;display:block;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 44px" style-hover="background:#1EBE5D;color:#0A0908">Agendar Avaliação</a>
+</div>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section id="inicio" data-screen-label="Hero" style="min-height:100vh;background:linear-gradient(90deg, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.72) 32%, rgba(10,9,8,0.36) 58%, rgba(10,9,8,0) 100%), radial-gradient(ellipse at 80% 50%, rgba(200,164,90,0.08) 0%, transparent 62%), url('./assets/fundo_hero.webp') top center / cover no-repeat;position:relative;overflow:hidden">
+  <div class="hero-split" style="display:flex;min-height:100vh">
+
+    <!-- Content -->
+    <div class="hero-txt" style="width:100%;max-width:760px;padding:172px 56px 100px 48px;display:flex;flex-direction:column;justify-content:center">
+      <div class="hanim" style="display:flex;flex-direction:column">
+
+        <div class="d1" style="display:none;align-items:center;gap:12px;margin-bottom:40px">
+          <div style="width:32px;height:1px;background:#C8A45A"></div>
+          <span style="font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#C8A45A">Clínica Odontológica Particular · Brasília, DF</span>
+        </div>
+
+        <h1 class="hero-h1 d2" style="font-family:'Playfair Display',serif;font-size:58px;font-weight:300;line-height:1.08;letter-spacing:-.015em;color:#F4EFE6;margin-bottom:36px">
+          Odontologia<br>
+          <em style="font-style:italic;color:#C8A45A">moderna</em> e<br>
+          humanizada.
+        </h1>
+
+        <div class="d3" style="width:54px;height:1px;background:#C8A45A;margin-bottom:32px"></div>
+
+        <p class="d4" style="font-size:15px;font-weight:300;line-height:1.82;color:#E6DED1;max-width:520px;margin-bottom:48px">
+          Na Premium Care Odontologia, você encontra atendimento particular, planejamento individualizado e tratamentos especializados para estética, função e saúde bucal — no JK Shopping, em Brasília.
+        </p>
+
+        <div class="hero-btns d5" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+          <a class="hero-wa-btn" href="{{ waLink }}" target="_blank" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;transition:background .25s" style-hover="background:#1EBE5D">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0908"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a onClick="{{ toTratamentos }}" style="display:none;font-size:12px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:#6A6460;border-bottom:1px solid transparent;padding-bottom:2px;transition:color .25s,border-color .25s" style-hover="color:#F4EFE6;border-bottom-color:#C8A45A">
+            Ver Tratamentos →
+          </a>
+        </div>
+
+        <div class="d6" style="display:none;align-items:center;gap:18px;margin-top:64px;padding-top:36px;border-top:1px solid rgba(200,164,90,0.1);flex-wrap:wrap">
+          <span style="font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#3A3630">Ortodontia</span>
+          <div style="width:3px;height:3px;border-radius:50%;background:#C8A45A;flex-shrink:0"></div>
+          <span style="font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#3A3630">Implantodontia</span>
+          <div style="width:3px;height:3px;border-radius:50%;background:#C8A45A;flex-shrink:0"></div>
+          <span style="font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#3A3630">Estética Dental</span>
+          <div style="width:3px;height:3px;border-radius:50%;background:#C8A45A;flex-shrink:0"></div>
+          <span style="font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#3A3630">JK Shopping · Brasília</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Visual frame -->
+    <div class="hero-vis vis-anim" style="display:none;flex:1;position:relative;align-items:center;justify-content:center;padding:76px 48px 40px 24px">
+      <div style="position:relative;width:100%;max-width:400px;height:560px">
+        <div style="position:absolute;inset:0;background:linear-gradient(145deg,#1A1612 0%,#231F19 55%,#141210 100%)"></div>
+        <div style="position:absolute;inset:0;border:1px solid rgba(200,164,90,0.18)"></div>
+        <div style="position:absolute;inset:20px;border:1px solid rgba(200,164,90,0.07)"></div>
+        <!-- Corner accents -->
+        <div style="position:absolute;top:-1px;left:-1px;width:36px;height:36px;border-top:2px solid #C8A45A;border-left:2px solid #C8A45A"></div>
+        <div style="position:absolute;top:-1px;right:-1px;width:36px;height:36px;border-top:2px solid #C8A45A;border-right:2px solid #C8A45A"></div>
+        <div style="position:absolute;bottom:-1px;left:-1px;width:36px;height:36px;border-bottom:2px solid #C8A45A;border-left:2px solid #C8A45A"></div>
+        <div style="position:absolute;bottom:-1px;right:-1px;width:36px;height:36px;border-bottom:2px solid #C8A45A;border-right:2px solid #C8A45A"></div>
+        <!-- Center -->
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px">
+        <img src="./assets/logo-premium-care-light.png" alt="" style="width:180px;opacity:0.08;pointer-events:none">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:rgba(200,164,90,0.32)">Foto a inserir</p>
+        </div>
+        <!-- Floating badge -->
+        <div style="position:absolute;bottom:28px;left:28px;background:#C8A45A;padding:14px 22px">
+          <p style="font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#0A0908;margin-bottom:3px">Atendimento</p>
+          <p style="font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:#0A0908;line-height:1.1">100% Particular</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll cue -->
+  <div style="display:none;position:absolute;bottom:32px;left:50%;transform:translateX(-50%);flex-direction:column;align-items:center;gap:8px">
+    <span style="font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#3A3630">Scroll</span>
+    <div style="width:1px;height:44px;background:linear-gradient(to bottom,rgba(200,164,90,0.45),transparent)"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ SOBRE ══════════════════════════ -->
+<section id="sobre" data-screen-label="Sobre" style="background:#F4EFE6">
+  <div class="sobre-split" style="display:flex;min-height:640px">
+
+    <!-- Image column (full-bleed left) -->
+    <div class="sobre-img" style="flex:0 0 46%;position:relative;background:#1A1612;display:flex;align-items:center;justify-content:center;overflow:hidden">
+      <img src="./assets/clinica.webp" alt="Clínica Premium Care" style="width:100%;height:100%;object-fit:cover;object-position:center">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,0.08) 0%,rgba(10,9,8,0.22) 100%)"></div>
+      <div style="position:absolute;inset:28px;border:1px solid rgba(200,164,90,0.16)"></div>
+      <div style="display:none;text-align:center;position:relative;z-index:1">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(200,164,90,0.35)" stroke-width="1" stroke-linecap="round">
+          <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+        <p style="font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,164,90,0.3);margin-top:12px">Foto da clínica</p>
+      </div>
+    </div>
+
+    <!-- Text column -->
+    <div class="sobre-txt" style="flex:1;padding:80px 72px;display:flex;flex-direction:column;justify-content:center">
+      <div style="max-width:520px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+          <div style="width:28px;height:1px;background:#C8A45A"></div>
+          <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Sobre a Clínica</span>
+        </div>
+
+        <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;color:#1E1A16;margin-bottom:28px">
+          Cuidado planejado,<br>atendimento humanizado.
+        </h2>
+
+        <p style="font-size:15px;font-weight:300;line-height:1.82;color:#5A5450;margin-bottom:22px">
+          A Premium Care Odontologia é uma clínica particular localizada no JK Shopping, entre Taguatinga e Ceilândia, com atendimento voltado a quem busca cuidado odontológico planejado, próximo e personalizado em Brasília, DF.
+        </p>
+        <p style="font-size:15px;font-weight:300;line-height:1.82;color:#5A5450;margin-bottom:48px">
+          Sob responsabilidade da Dra. Alessandra Cardoso Rezende, especialista em Ortodontia e Implantodontia, a clínica une saúde, estética e segurança — com escuta ativa, planejamento individualizado e orientação clara em cada etapa do tratamento.
+        </p>
+
+        <div style="margin-bottom:48px">
+          <div style="overflow:hidden">
+            <div style="display:flex;transform:translateX({{ sobreGalleryTransform }});transition:transform .65s cubic-bezier(.22,.61,.36,1)">
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f1.jpg" alt="Ambiente da clínica Premium Care" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                </div>
+              </div>
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f2.jpg" alt="Detalhe da estrutura da Premium Care" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                </div>
+              </div>
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f3.jpg" alt="Espaço interno da clínica Premium Care" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                </div>
+              </div>
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f4.jpg" alt="Estrutura de atendimento da Premium Care" style="width:100%;height:100%;object-fit:cover;object-position:center">
+                </div>
+              </div>
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center" aria-hidden="true">
+                </div>
+              </div>
+              <div class="sobre-gallery-slide" style="flex:0 0 33.3333%;padding-right:12px">
+                <div class="sobre-gallery-card" style="border:1px solid rgba(200,164,90,0.18);overflow:hidden;background:#E9E1D4">
+                  <img src="./assets/f2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center" aria-hidden="true">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:none;gap:40px;padding-top:36px;border-top:1px solid rgba(200,164,90,0.18);flex-wrap:wrap">
+          <div>
+            <p style="font-family:'Playfair Display',serif;font-size:48px;font-weight:300;color:#C8A45A;line-height:1">3+</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8A8278;margin-top:4px">Especialidades</p>
+          </div>
+          <div>
+            <p style="font-family:'Playfair Display',serif;font-size:48px;font-weight:300;color:#C8A45A;line-height:1">100%</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8A8278;margin-top:4px">Particular</p>
+          </div>
+          <div>
+            <p style="font-family:'Playfair Display',serif;font-size:48px;font-weight:300;color:#C8A45A;line-height:1">JK</p>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8A8278;margin-top:4px">Shopping · Brasília</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ TRATAMENTOS ══════════════════════════ -->
+<section id="tratamentos" data-screen-label="Tratamentos" style="background:#0A0908;padding:120px 0">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px">
+
+    <div style="text-align:center;margin-bottom:72px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px">
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+        <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Tratamentos</span>
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+      </div>
+      <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;line-height:1.2;color:#F4EFE6;max-width:620px;margin:0 auto">
+        Soluções especializadas para o seu sorriso
+      </h2>
+    </div>
+
+    <div class="trat-row" style="display:flex;gap:24px;align-items:stretch">
+
+      <!-- Implantes -->
+      <div class="trat-card" style="flex:1;background:#111009;border:1px solid rgba(200,164,90,0.12);display:flex;flex-direction:column;transition:border-color .3s" style-hover="border-color:rgba(200,164,90,0.42)">
+        <div style="height:280px;background:url('./assets/card5_geral.webp') center center / cover no-repeat"></div>
+        <div style="padding:36px 32px 40px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.2em;color:#C8A45A">01</span>
+            <div style="flex:1;height:1px;background:rgba(200,164,90,0.18)"></div>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#F4EFE6;line-height:1.25;margin-bottom:16px">Implantes Dentários</h3>
+          <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
+            Soluções completas em implantodontia em Brasília: implantes convencionais, unitários, protocolos e implantes guiados com planejamento cirúrgico preciso e abordagem menos invasiva quando indicada.
+          </p>
+          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+            Agendar Avaliação
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ortodontia -->
+      <div class="trat-card" style="flex:1;background:#111009;border:1px solid rgba(200,164,90,0.12);display:flex;flex-direction:column;transition:border-color .3s" style-hover="border-color:rgba(200,164,90,0.42)">
+        <div style="height:280px;background:url('./assets/card4_geral.webp') top center / cover no-repeat"></div>
+        <div style="padding:36px 32px 40px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.2em;color:#C8A45A">02</span>
+            <div style="flex:1;height:1px;background:rgba(200,164,90,0.18)"></div>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#F4EFE6;line-height:1.25;margin-bottom:16px">Ortodontia</h3>
+          <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
+            Diagnóstico, prevenção e correção de alterações dentárias e faciais em Taguatinga e Brasília. Aparelho convencional, estético, autoligado e alinhadores invisíveis para adolescentes e adultos.
+          </p>
+          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+            Agendar Avaliação
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Estética -->
+      <div class="trat-card" style="flex:1;background:#111009;border:1px solid rgba(200,164,90,0.12);display:flex;flex-direction:column;transition:border-color .3s" style-hover="border-color:rgba(200,164,90,0.42)">
+        <div style="height:280px;background:url('./assets/card6_geral.webp') center center / cover no-repeat"></div>
+        <div style="padding:36px 32px 40px;flex:1;display:flex;flex-direction:column">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <span style="font-size:11px;font-weight:600;letter-spacing:.2em;color:#C8A45A">03</span>
+            <div style="flex:1;height:1px;background:rgba(200,164,90,0.18)"></div>
+          </div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:#F4EFE6;line-height:1.25;margin-bottom:16px">Estética Dental</h3>
+          <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
+            Clareamento dental, facetas e lentes de contato dental, gengivoplastia e reabilitação oral estética. Planejamento individualizado para valorizar o sorriso com segurança em Brasília.
+          </p>
+          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+            Agendar Avaliação
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:40px">
+      <a class="trat-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 34px;transition:background .25s" style-hover="background:#1EBE5D">
+        Agendar pelo WhatsApp
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p style="display:none;text-align:center;font-size:12px;font-weight:300;letter-spacing:.07em;color:#8F8880;margin-top:32px">
+      Clínica particular · Não realizamos atendimento por convênio ou plano odontológico · Avaliação e planejamento individualizado
+    </p>
+    <p style="text-align:center;font-size:12px;font-weight:300;letter-spacing:.07em;color:#8F8880;margin-top:32px">
+      Não realizamos atendimento por convênio ou plano odontológico
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════ DIFERENCIAIS ══════════════════════════ -->
+<section id="depoimentos" data-screen-label="Depoimentos" style="background:#FFFFFF;padding:120px 0 110px;overflow:hidden">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px">
+    <div style="text-align:center;margin-bottom:56px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px">
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+        <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Depoimentos</span>
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+      </div>
+      <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;color:#1E1A16;max-width:620px;margin:0 auto 18px">
+        Experiências reais de quem confiou no nosso cuidado
+      </h2>
+      <p style="font-size:15px;font-weight:300;line-height:1.82;color:#6A6460;max-width:680px;margin:0 auto">
+        Atendimento humanizado, planejamento claro e acompanhamento próximo em cada etapa do tratamento.
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+    </div>
+
+    <div style="overflow:hidden">
+      <div style="display:flex;transform:translateX({{ depoimentosTransform }});transition:transform .65s cubic-bezier(.22,.61,.36,1)">
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">Fui muito bem atendida desde a primeira avaliação. Tudo foi explicado com calma e segurança, e isso me deixou muito confiante para iniciar o tratamento.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Mariana S.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Ortodontia</p>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">A clínica passa muita confiança. Gostei do cuidado nos detalhes, da atenção durante o atendimento e da transparência em todas as orientações.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Renata P.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Implantes Dentários</p>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">O atendimento é acolhedor e muito profissional. Me senti ouvida durante todo o processo e o resultado final ficou acima do que eu esperava.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Camila T.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Estética Dental</p>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">A equipe é extremamente atenciosa e organizada. Tive clareza sobre todas as etapas e me senti segura para seguir com o planejamento proposto.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Patrícia R.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Avaliação e Planejamento</p>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">Gostei muito do acompanhamento e do cuidado humanizado. A sensação é de estar em um lugar que realmente prioriza o paciente.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Juliana M.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Atendimento Humanizado</p>
+            </div>
+          </div>
+        </div>
+        <div class="depo-card" style="flex:0 0 33.3333%;padding:0 12px">
+          <div style="height:100%;background:#F8F3EA;border:1px solid rgba(200,164,90,0.2);padding:34px 30px 30px;display:flex;flex-direction:column">
+            <p style="font-family:'Playfair Display',serif;font-size:28px;line-height:1;color:#C8A45A;margin-bottom:20px">"</p>
+            <p style="font-size:15px;font-weight:300;line-height:1.82;color:#4E4843;flex:1">Estrutura excelente, localização prática e uma experiência muito tranquila do começo ao fim. Recomendo para quem busca qualidade e confiança.</p>
+            <div style="margin-top:26px;padding-top:18px;border-top:1px solid rgba(200,164,90,0.16)">
+              <p style="font-family:'Playfair Display',serif;font-size:24px;color:#1E1A16;margin-bottom:6px">Fernanda L.</p>
+              <p style="font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#9A8E80">Clínica Particular</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="depo-dots" style="display:flex;justify-content:center;gap:10px;margin-top:24px">
+      <div style="width:10px;height:10px;border-radius:50%;background:{{ depoDot0 }}"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:{{ depoDot1 }}"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:{{ depoDot2 }}"></div>
+      <div style="width:10px;height:10px;border-radius:50%;background:{{ depoDot3 }}"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ DRA. ALESSANDRA ══════════════════════════ -->
+<section id="dra-alessandra" data-screen-label="Dra Alessandra" style="background:#0A0908">
+  <div class="dra-split" style="display:flex;min-height:700px">
+
+    <!-- Portrait (full-bleed left) -->
+    <div class="dra-img" style="flex:0 0 42%;position:relative;background:#1A1612;display:flex;align-items:center;justify-content:center;overflow:hidden">
+      <img src="./assets/doutora.webp" alt="Dra. Alessandra Cardoso Rezende" style="width:100%;height:100%;object-fit:cover;object-position:center top">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,0.06) 0%,rgba(10,9,8,0.2) 100%)"></div>
+      <div style="position:absolute;inset:28px;border:1px solid rgba(200,164,90,0.14)"></div>
+      <div style="display:none;text-align:center;position:relative;z-index:1">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(200,164,90,0.3)" stroke-width="1" stroke-linecap="round">
+          <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
+          <circle cx="12" cy="13" r="4"/>
+        </svg>
+        <p style="font-size:9px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(200,164,90,0.28);margin-top:12px">Foto da Dra. Alessandra</p>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="dra-txt" style="flex:1;padding:80px 72px;display:flex;flex-direction:column;justify-content:center">
+      <div style="max-width:540px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+          <div style="width:28px;height:1px;background:#C8A45A"></div>
+          <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Conheça a Especialista</span>
+        </div>
+
+        <h2 style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;line-height:1.15;color:#F4EFE6;margin-bottom:32px">
+          Dra. Alessandra<br>
+          Cardoso <em style="font-style:italic;color:#C8A45A">Rezende</em>
+        </h2>
+
+        <div style="display:none;flex-direction:column;gap:12px;margin-bottom:32px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#8A8278;line-height:1.6">Cirurgiã-dentista</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#8A8278;line-height:1.6">Especialista em Ortodontia e Ortopedia Funcional dos Maxilares</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#8A8278;line-height:1.6">Especialista em Implantodontia — implantes convencionais, unitários, protocolos e guiados</p>
+          </div>
+        </div>
+
+        <p style="display:none;font-size:15px;font-weight:300;line-height:1.82;color:#6A6460;margin-bottom:48px">
+          Sua atuação é marcada por uma condução cuidadosa e transparente, com atenção às necessidades de cada paciente e orientação clara sobre as possibilidades de tratamento. O objetivo é oferecer um planejamento seguro, personalizado e alinhado ao que cada caso realmente precisa.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#D6CFC4;line-height:1.6">Cirurgiã-dentista</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#D6CFC4;line-height:1.6">Especialista em Ortodontia e Ortopedia Funcional dos Maxilares</p>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px">
+            <div style="width:4px;height:4px;border-radius:50%;background:#C8A45A;margin-top:7px;flex-shrink:0"></div>
+            <p style="font-size:14px;font-weight:300;color:#D6CFC4;line-height:1.6">Especialista em Implantodontia - implantes convencionais, unitários, protocolos e guiados</p>
+          </div>
+        </div>
+
+        <p style="font-size:15px;font-weight:300;line-height:1.82;color:#BDB5AA;margin-bottom:48px">
+          Sua atuação é marcada por uma condução cuidadosa e transparente, com atenção às necessidades de cada paciente e orientação clara sobre as possibilidades de tratamento. O objetivo é oferecer um planejamento seguro, personalizado e alinhado ao que cada caso realmente precisa.
+        </p>
+
+        <a class="dra-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #25D366;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 32px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
+          Agendar com a Dra. Alessandra
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="diferenciais" data-screen-label="Diferenciais" style="background:#F4EFE6;padding:120px 0">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px">
+
+    <div style="margin-bottom:72px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+        <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Por que nos escolher</span>
+      </div>
+      <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;color:#1E1A16;max-width:560px">
+        Uma experiência diferente em cada consulta
+      </h2>
+    </div>
+
+    <div class="dif-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Localização estratégica</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          No JK Shopping — entre Taguatinga e Ceilândia — com fácil acesso para toda a região de Brasília, estacionamento disponível e parada de ônibus próxima.
+        </p>
+      </div>
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7z"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Estrutura acessível</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          Ambiente moderno, climatizado e acolhedor. O shopping dispõe de rampas, elevadores amplos e banheiros adaptados em todos os andares para total acessibilidade.
+        </p>
+      </div>
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 7V4m6 3V4M9 20v-3m6 3v-3M4 9h3M4 15h3M17 9h3m-3 6h3"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Tecnologia odontológica</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          Consultórios equipados com raio-X odontológico e tecnologia de ponta para planejamento preciso dos tratamentos, garantindo mais segurança e conforto em cada etapa.
+        </p>
+      </div>
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Cuidado para toda a família</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          Diversas especialidades em um só lugar: cuidado integrado para crianças, adultos e idosos, do preventivo ao reabilitador, estético e implantodontia.
+        </p>
+      </div>
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Cuidado humanizado</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          Atendimento ético, acolhedor e transparente, com foco em entender as necessidades de cada paciente e oferecer orientação clara e segura em todo o tratamento.
+        </p>
+      </div>
+
+      <div style="background:#fff;padding:40px 36px;border:1px solid #E8E2D4;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#C8A45A;box-shadow:0 8px 32px rgba(200,164,90,0.08)">
+        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(200,164,90,0.4);display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:#1E1A16;line-height:1.3;margin-bottom:12px">Horários e condições facilitadas</h3>
+        <p style="font-size:14px;font-weight:300;line-height:1.78;color:#6A6460">
+          Agendamento flexível e condições de pagamento que facilitam o acesso ao tratamento certo, para que cuidar do seu sorriso caiba na sua rotina.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ ATENDIMENTO PARTICULAR ══════════════════════════ -->
+<section data-screen-label="Atendimento Particular" style="background:#131110;padding:120px 0">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px">
+
+    <div style="text-align:center;margin-bottom:80px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px">
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+        <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Atendimento Particular</span>
+        <div style="width:28px;height:1px;background:#C8A45A"></div>
+      </div>
+      <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;line-height:1.2;color:#FFF9F0;max-width:620px;margin:0 auto 20px">
+        Cuidado com valor,<br>planejado para você
+      </h2>
+      <p style="font-size:15px;font-weight:300;line-height:1.8;color:#D0C7BB;max-width:540px;margin:0 auto">
+        A Premium Care é uma clínica particular com foco em planejamento individualizado e condições de pagamento facilitadas para que o tratamento certo seja acessível à sua rotina.
+      </p>
+    </div>
+
+    <div class="part-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(200,164,90,0.1)">
+      <div style="background:#131110;padding:48px 36px;text-align:center">
+        <p style="font-family:'Playfair Display',serif;font-size:52px;font-weight:300;color:#C8A45A;line-height:1;margin-bottom:16px">01</p>
+        <h4 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:#F4EFE6;margin-bottom:12px">Planejamento</h4>
+        <p style="font-size:13px;font-weight:300;line-height:1.75;color:#6A6460">Avaliação completa e plano personalizado antes de qualquer procedimento</p>
+      </div>
+      <div style="background:#131110;padding:48px 36px;text-align:center">
+        <p style="font-family:'Playfair Display',serif;font-size:52px;font-weight:300;color:#C8A45A;line-height:1;margin-bottom:16px">02</p>
+        <h4 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:#F4EFE6;margin-bottom:12px">Transparência</h4>
+        <p style="font-size:13px;font-weight:300;line-height:1.75;color:#6A6460">Orientação clara sobre cada etapa do tratamento, sem surpresas</p>
+      </div>
+      <div style="background:#131110;padding:48px 36px;text-align:center">
+        <p style="font-family:'Playfair Display',serif;font-size:52px;font-weight:300;color:#C8A45A;line-height:1;margin-bottom:16px">03</p>
+        <h4 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:#F4EFE6;margin-bottom:12px">Conforto</h4>
+        <p style="font-size:13px;font-weight:300;line-height:1.75;color:#6A6460">Ambiente acolhedor e atendimento humanizado do início ao fim</p>
+      </div>
+      <div style="background:#131110;padding:48px 36px;text-align:center">
+        <p style="font-family:'Playfair Display',serif;font-size:52px;font-weight:300;color:#C8A45A;line-height:1;margin-bottom:16px">04</p>
+        <h4 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:#F4EFE6;margin-bottom:12px">Condições</h4>
+        <p style="font-size:13px;font-weight:300;line-height:1.75;color:#6A6460">Facilidades de pagamento para que o tratamento ideal seja acessível</p>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;padding:24px 40px;border:1px solid rgba(200,164,90,0.15);text-align:center">
+      <p style="font-size:13px;font-weight:400;letter-spacing:.05em;color:#6A6460">
+        <span style="color:#C8A45A;font-weight:500">Importante:</span> A Premium Care Odontologia é uma clínica particular e não realiza atendimento por convênio ou plano odontológico.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ LOCALIZAÇÃO ══════════════════════════ -->
+<section id="localizacao" data-screen-label="Localização" style="background:#F4EFE6">
+  <div class="loc-split" style="display:flex;min-height:560px">
+
+    <!-- Map (full-bleed left) -->
+    <div class="loc-map" style="flex:0 0 54%;position:relative;min-height:500px;overflow:hidden">
+      <iframe
+        src="https://maps.google.com/maps?q=JK+Shopping+Taguatinga+Norte+Bras%C3%ADlia+DF&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%"
+        height="100%"
+        style="position:absolute;inset:0;border:0;min-height:500px"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Info -->
+    <div class="loc-inf" style="flex:1;padding:80px 64px;display:flex;flex-direction:column;justify-content:center;background:#F4EFE6">
+      <div style="max-width:400px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px">
+          <div style="width:28px;height:1px;background:#C8A45A"></div>
+          <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#C8A45A">Onde Estamos</span>
+        </div>
+
+        <h2 style="font-family:'Playfair Display',serif;font-size:42px;font-weight:400;line-height:1.2;color:#1E1A16;margin-bottom:40px">
+          JK Shopping,<br>Taguatinga · Brasília
+        </h2>
+
+        <div style="display:flex;flex-direction:column;gap:22px;margin-bottom:44px">
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <div>
+              <p style="font-size:14px;font-weight:400;color:#1E1A16;margin-bottom:2px">JK Shopping — Taguatinga Norte</p>
+              <p style="font-size:13px;font-weight:300;color:#6A6460">Brasília, DF — Dentista no JK Shopping</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <div>
+              <p style="font-size:14px;font-weight:400;color:#1E1A16;margin-bottom:2px">Horários de Atendimento</p>
+              <p style="font-size:13px;font-weight:300;color:#6A6460">Segunda a Sexta: 8h às 18h</p>
+              <p style="font-size:13px;font-weight:300;color:#6A6460">Sábado: 8h às 13h</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px">
+              <path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3"/>
+              <rect x="9" y="11" width="14" height="10" rx="1"/>
+            </svg>
+            <div>
+              <p style="font-size:14px;font-weight:400;color:#1E1A16;margin-bottom:2px">Estacionamento</p>
+              <p style="font-size:13px;font-weight:300;color:#6A6460">Disponível dentro e fora do shopping</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A45A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px">
+              <circle cx="12" cy="5" r="1"/><path d="M8 21l4-16 4 16M4 21l2-8M20 21l-2-8"/>
+            </svg>
+            <div>
+              <p style="font-size:14px;font-weight:400;color:#1E1A16;margin-bottom:2px">Acessibilidade</p>
+              <p style="font-size:13px;font-weight:300;color:#6A6460">Rampas, elevadores e banheiros adaptados em todos os andares</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="loc-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:14px 28px;transition:background .25s" style-hover="background:#1EBE5D">
+          Agendar Consulta
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ CTA FINAL ══════════════════════════ -->
+<section data-screen-label="CTA Final" style="background:url('./assets/estrutura.webp') center center / cover fixed no-repeat;padding:140px 0;text-align:center;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,0.78) 0%,rgba(10,9,8,0.72) 35%,rgba(10,9,8,0.82) 100%), radial-gradient(ellipse at center,rgba(200,164,90,0.08) 0%,transparent 68%);pointer-events:none"></div>
+  <div class="px" style="max-width:780px;margin:0 auto;padding-left:48px;padding-right:48px;position:relative">
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:20px">
+      <div style="width:28px;height:1px;background:#C8A45A"></div>
+      <span style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#E2B75E">Cuide do seu sorriso</span>
+      <div style="width:28px;height:1px;background:#C8A45A"></div>
+    </div>
+
+    <h2 class="sec-t" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;line-height:1.15;color:#FFF9F0;margin-bottom:24px">
+      Agende sua avaliação<br>
+      <em style="font-style:italic;color:#C8A45A">com segurança</em>
+    </h2>
+
+    <p style="font-size:16px;font-weight:300;line-height:1.82;color:#E0D6C8;max-width:520px;margin:0 auto 52px">
+      Dê o primeiro passo para transformar a saúde e a estética do seu sorriso. Atendimento particular com planejamento personalizado, transparência e todo o cuidado que você merece.
+    </p>
+
+    <a class="cta-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#0A0908;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:20px 52px;transition:background .25s" style-hover="background:#1EBE5D">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A0908"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agendar pelo WhatsApp
+    </a>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer id="contato" data-screen-label="Footer" style="background:#060504;padding:80px 0 0">
+  <div class="px" style="max-width:1360px;margin:0 auto;padding-left:48px;padding-right:48px">
+    <div class="ftr-cols" style="display:flex;gap:64px;padding-bottom:64px;border-bottom:1px solid rgba(200,164,90,0.08)">
+
+      <!-- Brand -->
+      <div style="flex:0 0 260px">
+        <img src="./assets/logo-premium-care-light.png" alt="Premium Care Odontologia" style="height:70px;width:auto;object-fit:contain;margin-bottom:24px">
+        <p style="font-size:13px;font-weight:300;line-height:1.8;color:#5A5450;margin-bottom:28px">
+          Clínica odontológica particular em Brasília com foco em saúde, estética e qualidade de vida.
+        </p>
+        <div style="display:none;gap:12px;align-items:center">
+          <a href="#" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6A6460" stroke-width="1.5" stroke-linecap="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r=".5" fill="#6A6460"/>
+            </svg>
+          </a>
+          <a href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#6A6460"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <div style="flex:1">
+        <p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F4EFE6;margin-bottom:24px">Navegação</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <a onClick="{{ toInicio }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Início</a>
+          <a onClick="{{ toSobre }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Sobre a Premium Care</a>
+          <a onClick="{{ toTratamentos }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Tratamentos</a>
+          <a onClick="{{ toDra }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Dra. Alessandra</a>
+          <a onClick="{{ toDepoimentos }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Depoimentos</a>
+          <a onClick="{{ toLocalizacao }}" style="font-size:13px;font-weight:300;color:#5A5450;transition:color .25s" style-hover="color:#C8A45A">Localização</a>
+        </div>
+      </div>
+
+      <!-- Treatments -->
+      <div style="display:none;flex:1">
+        <p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F4EFE6;margin-bottom:24px">Tratamentos</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font-size:13px;font-weight:300;color:#5A5450">Implantes Dentários em Brasília</span>
+          <span style="font-size:13px;font-weight:300;color:#5A5450">Implante Guiado</span>
+          <span style="font-size:13px;font-weight:300;color:#5A5450">Ortodontia em Taguatinga</span>
+          <span style="font-size:13px;font-weight:300;color:#5A5450">Alinhadores Invisíveis</span>
+          <span style="font-size:13px;font-weight:300;color:#5A5450">Estética Dental em Brasília</span>
+        </div>
+      </div>
+
+      <!-- Atendimento -->
+      <div style="flex:1">
+        <p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F4EFE6;margin-bottom:24px">Atendimento</p>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div>
+            <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">Endereço</p>
+            <p style="font-size:13px;font-weight:300;color:#5A5450;line-height:1.65">JK Shopping — Taguatinga Norte<br>Brasília, DF</p>
+          </div>
+          <div>
+            <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">Horário</p>
+            <p style="font-size:13px;font-weight:300;color:#5A5450;line-height:1.65">Seg–Sex: 8h às 18h<br>Sáb: 8h às 13h</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div style="flex:1">
+        <p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#F4EFE6;margin-bottom:24px">Contato</p>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:none">
+            <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">WhatsApp</p>
+            <a href="{{ waLink }}" target="_blank" style="font-size:14px;font-weight:300;color:#C8A45A;transition:color .25s" style-hover="color:#D4B472">Fale conosco</a>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.instagram.com/premiumcareodontologia?igsh=MWoxczNobGY4YjFybQ%3D%3D" target="_blank" rel="noopener noreferrer" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6A6460" stroke-width="1.5" stroke-linecap="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r=".5" fill="#6A6460"/>
+              </svg>
+            </a>
+            <a href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#6A6460"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+          <div style="display:none">
+            <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">Endereço</p>
+            <p style="font-size:13px;font-weight:300;color:#5A5450;line-height:1.65">JK Shopping — Taguatinga Norte<br>Brasília, DF</p>
+          </div>
+          <div style="display:none">
+            <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">Horário</p>
+            <p style="font-size:13px;font-weight:300;color:#5A5450;line-height:1.65">Seg–Sex: 8h às 18h<br>Sáb: 8h às 13h</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div style="padding:24px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        © 2025 Premium Care Odontologia · Todos os direitos reservados
+      </p>
+      <p style="display:none;font-size:11px;font-weight:300;color:#2A2620;letter-spacing:.06em">
+        Clínica Particular · Não realizamos atendimento por convênio
+      </p>
+    </div>
+  </div>
+    <div style="padding:0 0 24px;text-align:center">
+      <p class="footer-copy" style="font-size:11px;font-weight:300;color:#AFA8A0;letter-spacing:.06em">
+        © 2026 Premium Care Odontologia · Todos os direitos reservados. Desenvolvido por SuperDental®
+      </p>
+    </div>
+</footer>
+
+<!-- ══════════════════════════ WA FLOAT ══════════════════════════ -->
+<a class="wa-float" href="{{ waLink }}" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:150;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;animation:waPulse 2.8s ease-in-out infinite;box-shadow:0 4px 18px rgba(37,211,102,0.45);transition:transform .25s" style-hover="transform:scale(1.1)">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;waNumber&quot;: {
+    &quot;editor&quot;: &quot;text&quot;,
+    &quot;default&quot;: &quot;5561999999999&quot;,
+    &quot;section&quot;: &quot;Contato&quot;,
+    &quot;tsType&quot;: &quot;string&quot;
+  }
+}">
+
+class Component extends DCLogic {
+  state = { navScrolled: false, mobileOpen: false, depoIndex: 0, sobreIndex: 0, viewportW: 1280 };
+
+  getCardsPerView(width = this.state.viewportW) {
+    if (width <= 600) return 1;
+    if (width <= 960) return 2;
+    return 3;
+  }
+
+  getDepoMaxIndex(width = this.state.viewportW) {
+    const cardsPerView = this.getCardsPerView(width);
+    return cardsPerView === 3 ? 3 : cardsPerView === 2 ? 4 : 5;
+  }
+
+  componentDidMount() {
+    this._onResize = () => {
+      const viewportW = window.innerWidth || 1280;
+      this.setState(s => ({
+        viewportW,
+        depoIndex: Math.min(s.depoIndex, this.getDepoMaxIndex(viewportW)),
+        sobreIndex: Math.min(s.sobreIndex, 3),
+      }));
+    };
+    this._onScroll = () => {
+      const scrolled = window.pageYOffset > 60;
+      if (scrolled !== this.state.navScrolled) {
+        this.setState({ navScrolled: scrolled });
+      }
+    };
+    this._onResize();
+    window.addEventListener('resize', this._onResize, { passive: true });
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._depoTimer = window.setInterval(() => {
+      this.setState(s => {
+        const max = this.getDepoMaxIndex();
+        return { depoIndex: s.depoIndex >= max ? 0 : s.depoIndex + 1 };
+      });
+    }, 3800);
+    this._sobreTimer = window.setInterval(() => {
+      this.setState(s => ({ sobreIndex: s.sobreIndex >= 3 ? 0 : s.sobreIndex + 1 }));
+    }, 3200);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('scroll', this._onScroll);
+    window.clearInterval(this._depoTimer);
+    window.clearInterval(this._sobreTimer);
+  }
+
+  scrollTo(id) {
+    return () => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 76;
+      window.scrollTo({ top, behavior: 'smooth' });
+      this.setState({ mobileOpen: false });
+    };
+  }
+
+  renderVals() {
+    // ⚠️ Atualizar com o número real de WhatsApp da clínica via Tweaks
+    const waN = this.props.waNumber ?? '5561996630520';
+    const waMsg = encodeURIComponent('Olá! Vim do Google e gostaria de mais informações');
+    const waLink = `https://wa.me/${waN}?text=${waMsg}`;
+
+    const { navScrolled, mobileOpen, depoIndex, sobreIndex, viewportW } = this.state;
+    const cardsPerView = this.getCardsPerView(viewportW);
+    const depoimentosTransform = `-${(depoIndex * 100) / cardsPerView}%`;
+    const sobreGalleryTransform = `-${(sobreIndex * 100) / cardsPerView}%`;
+
+    return {
+      navBg: navScrolled ? 'rgba(8,7,6,0.98)' : 'rgba(8,7,6,0.78)',
+      navShadow: navScrolled ? '0 1px 0 rgba(200,164,90,0.1)' : 'none',
+      mobileMenuDisplay: mobileOpen ? 'flex' : 'none',
+      depoimentosTransform,
+      sobreGalleryTransform,
+      depoDot0: depoIndex === 0 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
+      depoDot1: depoIndex === 1 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
+      depoDot2: depoIndex === 2 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
+      depoDot3: depoIndex === 3 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
+      waLink,
+      toInicio:      this.scrollTo('inicio'),
+      toSobre:       this.scrollTo('sobre'),
+      toTratamentos: this.scrollTo('tratamentos'),
+      toDra:         this.scrollTo('dra-alessandra'),
+      toDepoimentos: this.scrollTo('depoimentos'),
+      toLocalizacao: this.scrollTo('localizacao'),
+      toContato:     this.scrollTo('contato'),
+      toggleMenu: () => this.setState(s => ({ mobileOpen: !s.mobileOpen })),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
