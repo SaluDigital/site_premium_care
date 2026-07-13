@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YLR9SGDNV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YLR9SGDNV');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -34,11 +43,6 @@
     from { opacity: 0; }
     to   { opacity: 1; }
   }
-  @keyframes waPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
-    60%       { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
-  }
-
   .hanim > * { animation: fadeUp 1s cubic-bezier(.22,.61,.36,1) both; }
   .hanim > .d1 { animation-delay: .1s; }
   .hanim > .d2 { animation-delay: .28s; }
@@ -62,6 +66,13 @@
   [data-screen-label="Depoimentos"] > .px > div:first-child p[style*="letter-spacing:.06em"] { display: none !important; }
 .nav-dsk > p[style*="letter-spacing:.06em"] { display: none !important; }
   .depo-card { flex: 0 0 33.3333%; padding: 0 12px; }
+  .sellbot-wpp-open { border-radius: 999px !important; overflow: hidden; }
+  .notice-popup-wrap { align-items: center; justify-content: center; padding: 18px; background: rgba(0,0,0,0.58); }
+  .notice-popup { width: 460px; min-height: 220px; background: #F8F4EC; color: #171717; padding: 24px 22px 18px; position: relative; border-radius: 18px; }
+  .notice-popup-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; line-height: 1.05; letter-spacing: 0; text-transform: uppercase; white-space: nowrap; color: #111; margin: 0 58px 14px 0; }
+  .notice-popup-text { font-size: 16px; font-weight: 400; line-height: 1.6; color: #505050; margin: 0 0 26px; }
+  .notice-popup-ok { width: 132px; height: 58px; border: none; border-radius: 999px; background: #D7B95E; color: #161616; font-size: 18px; font-weight: 500; cursor: pointer; }
+  .notice-popup-close { width: 44px; height: 44px; border: none; border-radius: 50%; background: #EEEAE3; color: #111; position: absolute; top: 10px; right: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
 
   @media (max-width: 960px) {
     .nav-dsk  { display: none !important; }
@@ -136,7 +147,10 @@
     [data-screen-label="Footer"] .ftr-cols img { margin-left: auto !important; margin-right: auto !important; }
     [data-screen-label="Footer"] .ftr-cols div[style*="gap:12px;align-items:center"] { justify-content: center !important; width: 100% !important; }
     .footer-copy { font-size: 10px !important; line-height: 1.7 !important; }
-    .wa-float { width: 54px !important; height: 54px !important; right: 18px !important; bottom: 18px !important; }
+    .notice-popup-wrap { align-items: center !important; justify-content: center !important; padding: 18px !important; background: rgba(0,0,0,0.58) !important; }
+    .notice-popup { width: min(100%, 460px) !important; min-height: 220px !important; padding: 24px 22px 18px !important; }
+    .notice-popup-title { font-size: 28px !important; margin-right: 54px !important; white-space: nowrap !important; }
+    .notice-popup-text { font-size: 16px !important; line-height: 1.6 !important; }
     .sec-t     { font-size: 34px !important; }
   }
 </style>
@@ -160,7 +174,7 @@
     </div>
 
     <div style="display:flex;align-items:center;gap:16px">
-      <a class="nav-dsk" href="{{ waLink }}" target="_blank" style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid #25D366;background:#25D366;color:#0A0908;padding:10px 24px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
+      <a class="nav-dsk sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid #25D366;background:#25D366;color:#0A0908;padding:10px 24px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
         Agendar Avaliação
       </a>
       <button class="nav-hmb" onClick="{{ toggleMenu }}" style="display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px">
@@ -185,10 +199,23 @@
   <a class="mobile-menu-link" onClick="{{ toDra }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Dra. Alessandra</a>
   <a class="mobile-menu-link" onClick="{{ toDepoimentos }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Depoimentos</a>
   <a class="mobile-menu-link" onClick="{{ toLocalizacao }}" style="font-family:'Playfair Display',serif;font-size:42px;font-weight:300;letter-spacing:.04em;color:#F4EFE6;transition:color .25s" style-hover="color:#C8A45A">Localização</a>
-  <a class="mobile-menu-cta" href="{{ waLink }}" target="_blank" style="margin-top:12px;display:block;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 44px" style-hover="background:#1EBE5D;color:#0A0908">Agendar Avaliação</a>
+  <a class="mobile-menu-cta sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="margin-top:12px;display:block;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 44px" style-hover="background:#1EBE5D;color:#0A0908">Agendar Avaliação</a>
 </div>
 
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
+<div class="notice-popup-wrap" style="display:{{ popupDisplay }};position:fixed;inset:0;z-index:500;pointer-events:none">
+  <div class="notice-popup" role="dialog" aria-modal="true" aria-labelledby="notice-popup-title" style="pointer-events:auto">
+    <button class="notice-popup-close" type="button" onClick="{{ closePopup }}" aria-label="Fechar aviso">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 4l14 14M18 4L4 18"></path>
+      </svg>
+    </button>
+    <h2 id="notice-popup-title" class="notice-popup-title">Aviso importante</h2>
+    <p class="notice-popup-text">Não atendemos convênios. Os atendimentos são realizados apenas de forma particular.</p>
+    <button class="notice-popup-ok" type="button" onClick="{{ closePopup }}">Entendi</button>
+  </div>
+</div>
+
 <section id="inicio" data-screen-label="Hero" style="min-height:100vh;background:linear-gradient(90deg, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.72) 32%, rgba(10,9,8,0.36) 58%, rgba(10,9,8,0) 100%), radial-gradient(ellipse at 80% 50%, rgba(200,164,90,0.08) 0%, transparent 62%), url('./assets/fundo_hero.webp') top center / cover no-repeat;position:relative;overflow:hidden">
   <div class="hero-split" style="display:flex;min-height:100vh">
 
@@ -214,7 +241,7 @@
         </p>
 
         <div class="hero-btns d5" style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
-          <a class="hero-wa-btn" href="{{ waLink }}" target="_blank" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;transition:background .25s" style-hover="background:#1EBE5D">
+          <a class="hero-wa-btn sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:16px 32px;transition:background .25s" style-hover="background:#1EBE5D">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0908"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Agendar pelo WhatsApp
           </a>
@@ -355,7 +382,7 @@
           <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
             Soluções completas em implantodontia em Brasília: implantes convencionais, unitários, protocolos e implantes guiados com planejamento cirúrgico preciso e abordagem menos invasiva quando indicada.
           </p>
-          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+          <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
             Agendar Avaliação
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -374,7 +401,7 @@
           <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
             Diagnóstico, prevenção e correção de alterações dentárias e faciais em Taguatinga e Brasília. Aparelho convencional, estético, autoligado e alinhadores invisíveis para adolescentes e adultos.
           </p>
-          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+          <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
             Agendar Avaliação
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -393,7 +420,7 @@
           <p style="font-size:14px;font-weight:300;line-height:1.78;color:#C9C1B7;margin-bottom:32px;flex:1">
             Clareamento dental, facetas e lentes de contato dental, gengivoplastia e reabilitação oral estética. Planejamento individualizado para valorizar o sorriso com segurança em Brasília.
           </p>
-          <a href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
+          <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0C46B;display:flex;align-items:center;gap:8px;transition:color .25s" style-hover="color:#FFE0A0">
             Agendar Avaliação
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -403,7 +430,7 @@
     </div>
 
     <div style="display:flex;justify-content:center;margin-top:40px">
-      <a class="trat-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 34px;transition:background .25s" style-hover="background:#1EBE5D">
+      <a class="trat-wa-btn sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 34px;transition:background .25s" style-hover="background:#1EBE5D">
         Agendar pelo WhatsApp
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -594,7 +621,7 @@
           Sua atuação é marcada por uma condução cuidadosa e transparente, com atenção às necessidades de cada paciente e orientação clara sobre as possibilidades de tratamento. O objetivo é oferecer um planejamento seguro, personalizado e alinhado ao que cada caso realmente precisa.
         </p>
 
-        <a class="dra-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #25D366;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 32px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
+        <a class="dra-wa-btn sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #25D366;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:14px 32px;transition:background .25s,color .25s,border-color .25s" style-hover="background:#1EBE5D;border-color:#1EBE5D;color:#0A0908">
           Agendar com a Dra. Alessandra
         </a>
       </div>
@@ -818,7 +845,7 @@
           </div>
         </div>
 
-        <a class="loc-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:14px 28px;transition:background .25s" style-hover="background:#1EBE5D">
+        <a class="loc-wa-btn sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0A0908;font-size:11px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:14px 28px;transition:background .25s" style-hover="background:#1EBE5D">
           Agendar Consulta
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -847,7 +874,7 @@
       Dê o primeiro passo para transformar a saúde e a estética do seu sorriso. Atendimento particular com planejamento personalizado, transparência e todo o cuidado que você merece.
     </p>
 
-    <a class="cta-wa-btn" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#0A0908;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:20px 52px;transition:background .25s" style-hover="background:#1EBE5D">
+    <a class="cta-wa-btn sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="display:inline-flex;align-items:center;gap:12px;background:#25D366;color:#0A0908;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:20px 52px;transition:background .25s" style-hover="background:#1EBE5D">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#0A0908"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       Agendar pelo WhatsApp
     </a>
@@ -873,7 +900,7 @@
               <circle cx="17.5" cy="6.5" r=".5" fill="#6A6460"/>
             </svg>
           </a>
-          <a href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+          <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#6A6460"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
         </div>
@@ -925,7 +952,7 @@
         <div style="display:flex;flex-direction:column;gap:20px">
           <div style="display:none">
             <p style="font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6A6460;margin-bottom:4px">WhatsApp</p>
-            <a href="{{ waLink }}" target="_blank" style="font-size:14px;font-weight:300;color:#C8A45A;transition:color .25s" style-hover="color:#D4B472">Fale conosco</a>
+            <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="font-size:14px;font-weight:300;color:#C8A45A;transition:color .25s" style-hover="color:#D4B472">Fale conosco</a>
           </div>
           <div style="display:flex;gap:12px;align-items:center">
             <a href="https://www.instagram.com/premiumcareodontologia?igsh=MWoxczNobGY4YjFybQ%3D%3D" target="_blank" rel="noopener noreferrer" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
@@ -934,7 +961,7 @@
                 <circle cx="17.5" cy="6.5" r=".5" fill="#6A6460"/>
               </svg>
             </a>
-            <a href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
+            <a class="sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="width:36px;height:36px;border:1px solid rgba(200,164,90,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .25s" style-hover="border-color:#C8A45A">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#6A6460"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
           </div>
@@ -968,25 +995,18 @@
     </div>
 </footer>
 
-<!-- ══════════════════════════ WA FLOAT ══════════════════════════ -->
-<a class="wa-float" href="{{ waLink }}" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:150;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;animation:waPulse 2.8s ease-in-out infinite;box-shadow:0 4px 18px rgba(37,211,102,0.45);transition:transform .25s" style-hover="transform:scale(1.1)">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{
   &quot;waNumber&quot;: {
     &quot;editor&quot;: &quot;text&quot;,
-    &quot;default&quot;: &quot;5561999999999&quot;,
+    &quot;default&quot;: &quot;5561996630520&quot;,
     &quot;section&quot;: &quot;Contato&quot;,
     &quot;tsType&quot;: &quot;string&quot;
   }
 }">
 
 class Component extends DCLogic {
-  state = { navScrolled: false, mobileOpen: false, depoIndex: 0, viewportW: 1280 };
+  state = { navScrolled: false, mobileOpen: false, depoIndex: 0, viewportW: 1280, popupOpen: true };
 
   getCardsPerView(width = this.state.viewportW) {
     if (width <= 600) return 1;
@@ -1046,7 +1066,7 @@ class Component extends DCLogic {
     const waMsg = encodeURIComponent('Olá! Vim do Google e gostaria de mais informações');
     const waLink = `https://wa.me/${waN}?text=${waMsg}`;
 
-    const { navScrolled, mobileOpen, depoIndex, viewportW } = this.state;
+    const { navScrolled, mobileOpen, depoIndex, viewportW, popupOpen } = this.state;
     const cardsPerView = this.getCardsPerView(viewportW);
     const depoimentosTransform = `-${(depoIndex * 100) / cardsPerView}%`;
 
@@ -1054,6 +1074,7 @@ class Component extends DCLogic {
       navBg: navScrolled ? 'rgba(8,7,6,0.98)' : 'rgba(8,7,6,0.78)',
       navShadow: navScrolled ? '0 1px 0 rgba(200,164,90,0.1)' : 'none',
       mobileMenuDisplay: mobileOpen ? 'flex' : 'none',
+      popupDisplay: popupOpen ? 'flex' : 'none',
       depoimentosTransform,
       depoDot0: depoIndex === 0 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
       depoDot1: depoIndex === 1 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
@@ -1068,10 +1089,12 @@ class Component extends DCLogic {
       toLocalizacao: this.scrollTo('localizacao'),
       toContato:     this.scrollTo('contato'),
       toggleMenu: () => this.setState(s => ({ mobileOpen: !s.mobileOpen })),
+      closePopup: () => this.setState({ popupOpen: false }),
     };
   }
 }
 
 </script>
+<script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>
 </body>
 </html>
