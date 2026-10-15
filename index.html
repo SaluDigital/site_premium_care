@@ -67,12 +67,17 @@
 .nav-dsk > p[style*="letter-spacing:.06em"] { display: none !important; }
   .depo-card { flex: 0 0 33.3333%; padding: 0 12px; }
   .sellbot-wpp-open { border-radius: 999px !important; overflow: hidden; }
-  .notice-popup-wrap { align-items: center; justify-content: center; padding: 18px; background: rgba(0,0,0,0.58); }
-  .notice-popup { width: 460px; min-height: 220px; background: #F8F4EC; color: #171717; padding: 24px 22px 18px; position: relative; border-radius: 18px; }
-  .notice-popup-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; line-height: 1.05; letter-spacing: 0; text-transform: uppercase; white-space: nowrap; color: #111; margin: 0 58px 14px 0; }
-  .notice-popup-text { font-size: 16px; font-weight: 400; line-height: 1.6; color: #505050; margin: 0 0 26px; }
-  .notice-popup-ok { width: 132px; height: 58px; border: none; border-radius: 999px; background: #D7B95E; color: #161616; font-size: 18px; font-weight: 500; cursor: pointer; }
-  .notice-popup-close { width: 44px; height: 44px; border: none; border-radius: 50%; background: #EEEAE3; color: #111; position: absolute; top: 10px; right: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  :root { --notice-height: 48px; }
+  body { padding-bottom: calc(var(--notice-height) + env(safe-area-inset-bottom, 0px)); }
+  .notice-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+    min-height: calc(var(--notice-height) + env(safe-area-inset-bottom, 0px));
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px 20px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: #D7B95E; color: #171717;
+    border-top: 1px solid #E8D395; box-shadow: 0 -4px 20px rgba(0,0,0,.18);
+    text-align: center; font-size: 14px; font-weight: 600; line-height: 1.5;
+  }
 
   @media (max-width: 960px) {
     .nav-dsk  { display: none !important; }
@@ -147,10 +152,8 @@
     [data-screen-label="Footer"] .ftr-cols img { margin-left: auto !important; margin-right: auto !important; }
     [data-screen-label="Footer"] .ftr-cols div[style*="gap:12px;align-items:center"] { justify-content: center !important; width: 100% !important; }
     .footer-copy { font-size: 10px !important; line-height: 1.7 !important; }
-    .notice-popup-wrap { align-items: center !important; justify-content: center !important; padding: 18px !important; background: rgba(0,0,0,0.58) !important; }
-    .notice-popup { width: min(100%, 460px) !important; min-height: 220px !important; padding: 24px 22px 18px !important; }
-    .notice-popup-title { font-size: 28px !important; margin-right: 54px !important; white-space: nowrap !important; }
-    .notice-popup-text { font-size: 16px !important; line-height: 1.6 !important; }
+    :root { --notice-height: 64px; }
+    .notice-banner { font-size: 13px; padding-left: 16px; padding-right: 16px; }
     .sec-t     { font-size: 34px !important; }
   }
 </style>
@@ -202,20 +205,11 @@
   <a class="mobile-menu-cta sellbot-wpp-open" href="{{ waLink }}" target="_blank" style="margin-top:12px;display:block;background:#25D366;color:#0A0908;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:16px 44px" style-hover="background:#1EBE5D;color:#0A0908">Agendar Avaliação</a>
 </div>
 
-<!-- ══════════════════════════ HERO ══════════════════════════ -->
-<div class="notice-popup-wrap" style="display:{{ popupDisplay }};position:fixed;inset:0;z-index:500;pointer-events:none">
-  <div class="notice-popup" role="dialog" aria-modal="true" aria-labelledby="notice-popup-title" style="pointer-events:auto">
-    <button class="notice-popup-close" type="button" onClick="{{ closePopup }}" aria-label="Fechar aviso">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M4 4l14 14M18 4L4 18"></path>
-      </svg>
-    </button>
-    <h2 id="notice-popup-title" class="notice-popup-title">Aviso importante</h2>
-    <p class="notice-popup-text">Não atendemos convênios. Os atendimentos são realizados apenas de forma particular.</p>
-    <button class="notice-popup-ok" type="button" onClick="{{ closePopup }}">Entendi</button>
-  </div>
-</div>
+<aside class="notice-banner" aria-label="Aviso sobre atendimento">
+  <p>Não trabalhamos com planos odontológicos ou convênios.</p>
+</aside>
 
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
 <section id="inicio" data-screen-label="Hero" style="min-height:100vh;background:linear-gradient(90deg, rgba(10,9,8,0.88) 0%, rgba(10,9,8,0.72) 32%, rgba(10,9,8,0.36) 58%, rgba(10,9,8,0) 100%), radial-gradient(ellipse at 80% 50%, rgba(200,164,90,0.08) 0%, transparent 62%), url('./assets/fundo_hero.webp') top center / cover no-repeat;position:relative;overflow:hidden">
   <div class="hero-split" style="display:flex;min-height:100vh">
 
@@ -1006,7 +1000,7 @@
 }">
 
 class Component extends DCLogic {
-  state = { navScrolled: false, mobileOpen: false, depoIndex: 0, viewportW: 1280, popupOpen: true };
+  state = { navScrolled: false, mobileOpen: false, depoIndex: 0, viewportW: 1280 };
 
   getCardsPerView(width = this.state.viewportW) {
     if (width <= 600) return 1;
@@ -1066,7 +1060,7 @@ class Component extends DCLogic {
     const waMsg = encodeURIComponent('Olá! Vim do Google e gostaria de mais informações');
     const waLink = `https://wa.me/${waN}?text=${waMsg}`;
 
-    const { navScrolled, mobileOpen, depoIndex, viewportW, popupOpen } = this.state;
+    const { navScrolled, mobileOpen, depoIndex, viewportW } = this.state;
     const cardsPerView = this.getCardsPerView(viewportW);
     const depoimentosTransform = `-${(depoIndex * 100) / cardsPerView}%`;
 
@@ -1074,7 +1068,6 @@ class Component extends DCLogic {
       navBg: navScrolled ? 'rgba(8,7,6,0.98)' : 'rgba(8,7,6,0.78)',
       navShadow: navScrolled ? '0 1px 0 rgba(200,164,90,0.1)' : 'none',
       mobileMenuDisplay: mobileOpen ? 'flex' : 'none',
-      popupDisplay: popupOpen ? 'flex' : 'none',
       depoimentosTransform,
       depoDot0: depoIndex === 0 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
       depoDot1: depoIndex === 1 ? '#C8A45A' : 'rgba(200,164,90,0.24)',
@@ -1089,7 +1082,6 @@ class Component extends DCLogic {
       toLocalizacao: this.scrollTo('localizacao'),
       toContato:     this.scrollTo('contato'),
       toggleMenu: () => this.setState(s => ({ mobileOpen: !s.mobileOpen })),
-      closePopup: () => this.setState({ popupOpen: false }),
     };
   }
 }
